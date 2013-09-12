@@ -1,0 +1,20 @@
+{
+	"name": "meta-marked",
+	"version": "0.0.0",
+	"description": "The 'marked' markdown processor with a simple metadata system.",
+	"main": "./lib/meta-marked.js",
+	"keywords": [
+		"markdown",
+		"metadata",
+		"html"
+	],
+	"author": "j201 <j201.alex@gmail.com> (http://j201.github.io/)",
+	"license": "MIT",
+	"repository" : {
+		"type" : "git",
+		"url" : "git://github.com/j201/meta-marked.git"
+	},
+	"dependencies" : {
+		"marked" : "0.2.x"
+	}
+}
