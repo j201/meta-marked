@@ -8,7 +8,7 @@ The `meta-marked` function behaves exactly the same as [`marked`](http://github.
 - Instead of returning a parsed string, `meta-marked` returns an object with two properties: `meta`, which contains the metadata object, and `html`, which contains the parsed HTML.
 - `metaMarked.noMeta` is a reference to the `marked` function, so it can be used to avoid parsing metadata.
 
-The metadata system used here is based on [MultiMarkdown](http://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#metadata). It consists of key: value pairs at the top of the document, followed by a blank line. For example, running `metaMarked(...)` on this text:
+The metadata system used here is based on [MultiMarkdown](http://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#metadata). It consists of key: value pairs at the top of the document, followed by a blank line. A line starting with whitespace is treated as a list item for the previous key. For example, running `metaMarked(...)` on this text:
 
 ```
 Title:   My awesome markdown file
@@ -36,7 +36,7 @@ will result in the following output:
 }
 ```
 
-Note that only string-\>string and non-nested string-\>array pairs are supported. Any whitespace before and after the colon and at the beginning or end of the line is ignored. If you need a colon in the key or value, escape it with a backslash.
+Note that only string-\>string and non-nested string-\>array pairs are supported. Any whitespace before and after the colon and at end of the line is ignored.
 
 ---
 
