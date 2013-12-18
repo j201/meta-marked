@@ -1,20 +1,25 @@
 ## meta-marked
-#### The [marked](http://github.com/chjj/marked) markdown processor for Node.js with a simple metadata system added on.
+#### The [marked](http://github.com/chjj/marked) markdown processor for Node.js with support for [YAML](http://yaml.org/) metadata
 
 Just a quick extension I needed for processing markdown in Node. Props to Christopher Jeffrey for his excellent markdown processor 'marked'.
 
 The `meta-marked` function behaves exactly the same as [`marked`](http://github.com/chjj/marked#usage), except for the following:
 
-- Instead of returning a parsed string, `meta-marked` returns an object with two properties: `meta`, which contains the metadata object, and `html`, which contains the parsed HTML.
+- Instead of returning a parsed string, `meta-marked` returns an object with two properties: `meta`, which contains the metadata object or `null` if metadata isn't found, and `html`, which contains the parsed HTML.
 - `metaMarked.noMeta` is a reference to the `marked` function, so it can be used to avoid parsing metadata.
 
-The metadata system used here is based on [MultiMarkdown](http://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#metadata). It consists of key: value pairs at the top of the document, followed by a blank line. A line starting with whitespace is treated as a list item for the previous key. For example, running `metaMarked(...)` on this text:
+In order to include metadata in a document, insert YAML at the top of the document surrounded by `---` and `...`. Note that if the given string doesn't start with `---`, it will not be interpreted as having metadata.
+
+### Example
 
 ```
+---
 Title:   My awesome markdown file
 Author:  Me
-Scripts: js/doStuff.js
-         js/doMoreStuff.js
+Scripts:
+    - js/doStuff.js
+    - js/doMoreStuff.js
+...
 
 ##Header
 Regular text and stuff goes here.
@@ -35,8 +40,6 @@ will result in the following output:
 	"html": "<h2>Header</h2>\n<p>Regular text and stuff goes here.</p>\n"
 }
 ```
-
-Note that only string-\>string and non-nested string-\>array pairs are supported. Any whitespace before and after the colon and at end of the line is ignored.
 
 ---
 

@@ -15,6 +15,7 @@
 		"url" : "git://github.com/j201/meta-marked.git"
 	},
 	"dependencies" : {
-		"marked" : "0.2.x"
+		"marked" : "0.2.x",
+		"js-yaml" : "3.0.x"
 	}
 }
