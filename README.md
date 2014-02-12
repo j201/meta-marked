@@ -29,7 +29,7 @@ You can also use the approach below, which will result in a very nice data table
 
 ```
 ---
-Title:   Another great file
+Title:   My awesome markdown file
 Author:  Me
 Scripts:
     - js/doStuff.js
