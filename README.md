@@ -25,7 +25,22 @@ Scripts:
 Regular text and stuff goes here.
 ```
 
-will result in the following output:
+You can also use the approach below, which will result in a very nice data table at the top of your markdown when viewing the file GitHub:
+
+```
+---
+Title:   Another great file
+Author:  Me
+Scripts:
+    - js/doStuff.js
+    - js/doMoreStuff.js
+---
+
+##Header
+Regular text and stuff goes here.
+```
+
+Both of the above will result in the following output:
 
 ```
 {
