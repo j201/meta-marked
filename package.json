@@ -1,6 +1,6 @@
 {
 	"name": "meta-marked",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"description": "The 'marked' markdown processor with a simple metadata system.",
 	"main": "./lib/meta-marked.js",
 	"keywords": [
@@ -17,5 +17,11 @@
 	"dependencies" : {
 		"marked" : "0.3.x",
 		"js-yaml" : "3.0.x"
+	},
+	"devDependencies" : {
+		"tape" : "~2.4.2"
+	},
+	"scripts" : {
+		"test" : "node ./test/test"
 	}
 }
