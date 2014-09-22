@@ -1,6 +1,6 @@
 {
 	"name": "meta-marked",
-	"version": "0.3.1",
+	"version": "0.3.2",
 	"description": "The 'marked' markdown processor with a simple metadata system.",
 	"main": "./lib/meta-marked.js",
 	"keywords": [
