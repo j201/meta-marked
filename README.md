@@ -1,6 +1,8 @@
 ## meta-marked
 #### The [marked](http://github.com/chjj/marked) markdown processor for Node.js with support for [YAML](http://yaml.org/) metadata
 
+![dependencies](https://david-dm.org/j201/meta-marked.png) 
+
 Just a quick extension I needed for processing markdown in Node. Props to Christopher Jeffrey for his excellent markdown processor 'marked'.
 
 The `meta-marked` function behaves exactly the same as [`marked`](http://github.com/chjj/marked#usage), except for the following:
