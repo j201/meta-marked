@@ -66,4 +66,4 @@ npm test
 
 ---
 
-Licensed under [the MIT License](http://opensource.org/licenses/MIT). © 2013 j201
+Licensed under [the MIT License](http://opensource.org/licenses/MIT). © 2013-2014 j201
