@@ -9,6 +9,7 @@ tape("meta-marked", function(t) {
 
 	t.ok(basicResult.meta, "result.meta exists");
 	t.ok(basicResult.html, "result.html exists");
+	t.ok(basicResult.markdown, "result.markdown exists");
 
 	t.equal(basicResult.html, marked(basicTestMD), "result.html matches the marked output");
 	t.deepEqual(basicResult.meta, {
@@ -19,6 +20,7 @@ tape("meta-marked", function(t) {
             "js/doMoreStuff.js"
         ]
     }, "result.meta matches the yml output");
+	t.equal(basicResult.markdown, basicTestMD, "result.markdown matches the markdown input");
 
 	t.equal(metaMarked.noMeta(basicTestMD), marked(basicTestMD), ".noMeta produces the same output as marked");
 
