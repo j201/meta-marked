@@ -7,7 +7,10 @@ Just a quick extension I needed for processing markdown in Node. Props to Christ
 
 The `meta-marked` function behaves exactly the same as [`marked`](http://github.com/chjj/marked#usage), except for the following:
 
-- Instead of returning a parsed string, `meta-marked` returns an object with two properties: `meta`, which contains the metadata object or `null` if metadata isn't found, and `html`, which contains the parsed HTML.
+- Instead of returning a parsed string, `meta-marked` returns an object with the following properties:
+	- `meta` contains the metadata object or `null` if metadata isn't found
+	- `html` contains the parsed HTML
+	- `markdown` contains the text of the markdown section of the string
 - `metaMarked.noMeta` is a reference to the `marked` function, so it can be used to avoid parsing metadata.
 
 In order to include metadata in a document, insert YAML at the top of the document surrounded by `---` and `...`. Note that if the given string doesn't start with `---`, it will not be interpreted as having metadata.
@@ -54,7 +57,8 @@ Both of the above will result in the following output:
 			"js/doMoreStuff.js"
 		]
 	},
-	"html": "<h2>Header</h2>\n<p>Regular text and stuff goes here.</p>\n"
+	"html": "<h2>Header</h2>\n<p>Regular text and stuff goes here.</p>\n",
+	"markdown": "\n\n##Header\nRegular text and stuff goes here."
 }
 ```
 
