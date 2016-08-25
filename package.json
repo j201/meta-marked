@@ -1,6 +1,6 @@
 {
 	"name": "meta-marked",
-	"version": "0.4.1",
+	"version": "0.4.2",
 	"description": "The 'marked' markdown processor with a simple metadata system.",
 	"main": "./lib/meta-marked.js",
 	"keywords": [
@@ -15,7 +15,7 @@
 		"url" : "git://github.com/j201/meta-marked.git"
 	},
 	"dependencies" : {
-		"marked" : "~0.3.5",
+		"marked" : "~0.3.6",
 		"js-yaml" : "~3.5.5"
 	},
 	"devDependencies" : {
